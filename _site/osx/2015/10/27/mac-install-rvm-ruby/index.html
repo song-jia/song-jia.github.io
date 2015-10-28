@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>OSX上安装RVM和Ruby &#8211; 想.做</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Song,Jia">
+    <meta name="keywords" content="osx">
+    <link rel="canonical" href="http://song-jia.github.io/osx/2015/10/27/mac-install-rvm-ruby/">
+    <link rel="alternate" type="application/rss+xml" title="RSS Feed for 想.做" href="/feed.xml" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/pixyll.css?201510281559" type="text/css">
+
+    <!-- Fonts -->
+    <link href='//fonts.useso.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.useso.com/css?family=Lato:900,300' rel='stylesheet' type='text/css'>
+    
+
+    <!-- Verifications -->
+    
+
+    <!-- Open Graph -->
+    <!-- From: https://github.com/mmistakes/hpstr-jekyll-theme/blob/master/_includes/head.html -->
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="OSX上安装RVM和Ruby">
+    <meta property="og:description" content="">
+    <meta property="og:url" content="http://song-jia.github.io/osx/2015/10/27/mac-install-rvm-ruby/">
+    <meta property="og:site_name" content="想.做">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary" />
+    
+    <meta name="twitter:title" content="OSX上安装RVM和Ruby" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:url" content="http://song-jia.github.io/osx/2015/10/27/mac-install-rvm-ruby/" />
+
+    <!-- Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+
+    
+</head>
+
+<body class="site">
+  <div class="site-wrap">
+    <header class="site-header px2 px-responsive">
+  <div class="mt2 wrap">
+    <div class="measure">
+      <a href="http://song-jia.github.io" class="site-title">想.做</a>
+      <nav class="site-nav">
+        <a href="/about/">About</a>
+<a href="/contact/">Contact</a>
+
+      </nav>
+      <div class="clearfix"></div>
+      
+    </div>
+  </div>
+</header>
+
+
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        
+
+
+
+
+<div class="post-header mb2">
+  <h1>OSX上安装RVM和Ruby</h1>
+  <span class="post-meta">Oct 27, 2015</span><br>
+  
+  <span class="post-meta small">
+  
+    1 minute read
+  
+  </span>
+</div>
+
+<article class="post-content">
+  <h2 id="背景">背景</h2>
+
+<p>使用系统自带的Ruby gem安装ruby程序的时候会要求使用root帐号或者使用sudo来提高权限。并且当某些程序需要其他版本Ruby的时候切换也不是很方便。不过很幸运RVM可以帮助我们方便的管理Ruby版本在不同版本间方便切换，而且所有内容都安装在当前用户的目录中不会有权限问题。下面是简单的RVM安装使用步骤。</p>
+
+<h2 id="安装">安装</h2>
+
+<p>RVM的官网提供了详尽的<a href="http://rvm.io/rvm/install#explained">安装方法</a>,对英文没有障碍或是想了解更多的朋友可以参考。</p>
+
+<p>在进行所有安装之前需要先执行下面的命令安装GnuPG用于RVM在安装过程中验证安装包</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+</code></pre></div>
+<p>如果执行上面的命令报错&quot;gpg: command not found&quot;需要先安装gpg。如果已经安装homedrew可以使用下面的命令安装gpg。</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">brew install gnupg gnupg2
+</code></pre></div>
+<p>安装RVM</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="se">\c</span>url -sSL https://get.rvm.io <span class="p">|</span> bash -s stable
+</code></pre></div>
+<p>安装完成后执行下面的命令把rvm命令加到shell中,命令中星号的部分替换成当前登陆的用户名。</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">source</span> /Users/*******/.rvm/scripts/rvm
+</code></pre></div>
+<p>安装好以后执行rvm list known列出可以安装的ruby版本。</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$rvm</span> list known
+<span class="c"># MRI Rubies</span>
+<span class="o">[</span>ruby-<span class="o">]</span>1.8.6<span class="o">[</span>-p420<span class="o">]</span>
+<span class="o">[</span>ruby-<span class="o">]</span>1.8.7<span class="o">[</span>-head<span class="o">]</span> <span class="c"># security released on head</span>
+<span class="o">[</span>ruby-<span class="o">]</span>1.9.1<span class="o">[</span>-p431<span class="o">]</span>
+<span class="o">[</span>ruby-<span class="o">]</span>1.9.2<span class="o">[</span>-p330<span class="o">]</span>
+<span class="o">[</span>ruby-<span class="o">]</span>1.9.3<span class="o">[</span>-p551<span class="o">]</span>
+<span class="o">[</span>ruby-<span class="o">]</span>2.0.0<span class="o">[</span>-p643<span class="o">]</span>
+<span class="o">[</span>ruby-<span class="o">]</span>2.1.4
+<span class="o">[</span>ruby-<span class="o">]</span>2.1<span class="o">[</span>.5<span class="o">]</span>
+<span class="o">[</span>ruby-<span class="o">]</span>2.2<span class="o">[</span>.1<span class="o">]</span>
+<span class="o">[</span>ruby-<span class="o">]</span>2.2-head
+ruby-head
+</code></pre></div>
+<p>安装ruby 2.1</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">rvm isntall 2.1
+</code></pre></div>
+<p>安装成功</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>ruby -v
+ruby 2.1.5p273 <span class="o">(</span>2014-11-13 revision 48405<span class="o">)</span> <span class="o">[</span>x86_64-darwin15.0<span class="o">]</span>
+</code></pre></div>
+</article>
+
+
+
+
+
+
+
+
+
+      </div>
+    </div>
+  </div>
+
+  <footer class="center">
+  <div class="measure">
+    <small>
+      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
+      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
+    </small>
+  </div>
+</footer>
+
+</body>
+</html>
