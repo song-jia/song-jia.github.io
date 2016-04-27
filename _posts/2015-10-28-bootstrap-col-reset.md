@@ -6,9 +6,7 @@ tags: [css,bootstrap]
 ---
 
 ##问题
-
-使用bootstrap3的grid进行布局，当第一列的高度高于其他列时，自动换行的列不能够从行的最左侧开始排列。
-
+使用bootstrap3的grid进行布局，当第一列的高度高于其他列时，自动换行的列不能够从行的最左侧开始排列。  
 问题代码示例 <http://output.jsbin.com/gedujediwa>
 
 ```html

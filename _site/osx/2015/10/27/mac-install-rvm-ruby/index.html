@@ -7,12 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Song,Jia">
-    <meta name="keywords" content="osx">
+    <meta name="keywords" content="OSX">
     <link rel="canonical" href="http://song-jia.github.io/osx/2015/10/27/mac-install-rvm-ruby/">
     <link rel="alternate" type="application/rss+xml" title="RSS Feed for 想.做" href="/feed.xml" />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/css/pixyll.css?201510281559" type="text/css">
+    <link rel="stylesheet" href="/css/pixyll.css?201604272342" type="text/css">
 
     <!-- Fonts -->
     <link href='//fonts.useso.com/css?family=Merriweather:900,900italic,300,300italic' rel='stylesheet' type='text/css'>
@@ -80,8 +80,6 @@
         
 
 
-
-
 <div class="post-header mb2">
   <h1>OSX上安装RVM和Ruby</h1>
   <span class="post-meta">Oct 27, 2015</span><br>
@@ -109,32 +107,32 @@
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">brew install gnupg gnupg2
 </code></pre></div>
 <p>安装RVM</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="se">\c</span>url -sSL https://get.rvm.io <span class="p">|</span> bash -s stable
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="se">\c</span>url -sSL https://get.rvm.io | bash -s stable
 </code></pre></div>
 <p>安装完成后执行下面的命令把rvm命令加到shell中,命令中星号的部分替换成当前登陆的用户名。</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">source</span> /Users/*******/.rvm/scripts/rvm
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nb">source</span> /Users/<span class="k">*******</span>/.rvm/scripts/rvm
 </code></pre></div>
 <p>安装好以后执行rvm list known列出可以安装的ruby版本。</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$rvm</span> list known
 <span class="c"># MRI Rubies</span>
-<span class="o">[</span>ruby-<span class="o">]</span>1.8.6<span class="o">[</span>-p420<span class="o">]</span>
-<span class="o">[</span>ruby-<span class="o">]</span>1.8.7<span class="o">[</span>-head<span class="o">]</span> <span class="c"># security released on head</span>
-<span class="o">[</span>ruby-<span class="o">]</span>1.9.1<span class="o">[</span>-p431<span class="o">]</span>
-<span class="o">[</span>ruby-<span class="o">]</span>1.9.2<span class="o">[</span>-p330<span class="o">]</span>
-<span class="o">[</span>ruby-<span class="o">]</span>1.9.3<span class="o">[</span>-p551<span class="o">]</span>
-<span class="o">[</span>ruby-<span class="o">]</span>2.0.0<span class="o">[</span>-p643<span class="o">]</span>
-<span class="o">[</span>ruby-<span class="o">]</span>2.1.4
-<span class="o">[</span>ruby-<span class="o">]</span>2.1<span class="o">[</span>.5<span class="o">]</span>
-<span class="o">[</span>ruby-<span class="o">]</span>2.2<span class="o">[</span>.1<span class="o">]</span>
-<span class="o">[</span>ruby-<span class="o">]</span>2.2-head
+<span class="o">[</span>ruby-]1.8.6[-p420]
+<span class="o">[</span>ruby-]1.8.7[-head] <span class="c"># security released on head</span>
+<span class="o">[</span>ruby-]1.9.1[-p431]
+<span class="o">[</span>ruby-]1.9.2[-p330]
+<span class="o">[</span>ruby-]1.9.3[-p551]
+<span class="o">[</span>ruby-]2.0.0[-p643]
+<span class="o">[</span>ruby-]2.1.4
+<span class="o">[</span>ruby-]2.1[.5]
+<span class="o">[</span>ruby-]2.2[.1]
+<span class="o">[</span>ruby-]2.2-head
 ruby-head
 </code></pre></div>
 <p>安装ruby 2.1</p>
 <div class="highlight"><pre><code class="language-bash" data-lang="bash">rvm isntall 2.1
 </code></pre></div>
 <p>安装成功</p>
-<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">$ </span>ruby -v
-ruby 2.1.5p273 <span class="o">(</span>2014-11-13 revision 48405<span class="o">)</span> <span class="o">[</span>x86_64-darwin15.0<span class="o">]</span>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="gp">$ </span>ruby -v
+ruby 2.1.5p273 <span class="o">(</span>2014-11-13 revision 48405<span class="o">)</span> <span class="o">[</span>x86_64-darwin15.0]
 </code></pre></div>
 </article>
 
@@ -153,8 +151,6 @@ ruby 2.1.5p273 <span class="o">(</span>2014-11-13 revision 48405<span class="o">
   <footer class="center">
   <div class="measure">
     <small>
-      Theme crafted with &lt;3 by <a href="http://johnotander.com">John Otander</a> (<a href="https://twitter.com/4lpine">@4lpine</a>).<br>
-      &lt;/&gt; available on <a href="https://github.com/johnotander/pixyll">Github</a>.
     </small>
   </div>
 </footer>

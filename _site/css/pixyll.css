@@ -129,7 +129,7 @@ p,
 dl,
 ol,
 ul {
-  font-size: 1rem;
+  font-size: 0.875rem;
   margin-top: 0;
   margin-bottom: 1rem; }
 
@@ -141,7 +141,7 @@ pre,
 code,
 samp {
   font-family: "Source Code Pro", Consolas, monospace;
-  font-size: inherit; }
+  font-size: 0.75rem; }
 
 pre {
   margin-top: 0;
@@ -161,24 +161,24 @@ blockquote {
 
 blockquote,
 blockquote p {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-style: italic; }
 
 h1,
 .h1 {
-  font-size: 2.998rem; }
+  font-size: 1.6rem; }
 
 h2,
 .h2 {
-  font-size: 1.5rem; }
+  font-size: 1.25rem; }
 
 h3,
 .h3 {
-  font-size: 1.25rem; }
+  font-size: 1rem; }
 
 h4,
 .h4 {
-  font-size: 1rem; }
+  font-size: 0.875rem; }
 
 h5,
 .h5 {
@@ -826,11 +826,11 @@ small,
 
 .site-header a {
   color: #333;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 300; }
 
 .site-header .site-title {
-  font-size: 1.5rem; }
+  font-size: 1.6rem; }
 
 .site-nav {
   margin-top: 1rem; }
@@ -1075,7 +1075,7 @@ blockquote footer {
 
   h1,
   .h1 {
-    font-size: 2.998rem; }
+    font-size: 1.6rem; }
 
   .site-header {
     text-align: left; }
@@ -1084,10 +1084,10 @@ blockquote footer {
     margin-top: 0; }
 
   .site-header a {
-    font-size: 1rem; }
+    font-size: 0.875rem; }
 
   .site-header .site-title {
-    font-size: 1.25rem;
+    font-size: 1.6rem;
     float: left; }
 
   .site-header .site-nav {
