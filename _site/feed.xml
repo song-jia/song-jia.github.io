@@ -8,7 +8,7 @@
     
       <item>
         <title>使用bootstrap的grid进行布局时列自动换行的问题</title>
-        <description>&lt;h2 id=&quot;问题&quot;&gt;问题&lt;/h2&gt;
+        <description>&lt;h2&gt;问题&lt;/h2&gt;
 
 &lt;p&gt;使用bootstrap3的grid进行布局，当第一列的高度高于其他列时，自动换行的列不能够从行的最左侧开始排列。&lt;br&gt;
 问题代码示例 &lt;a href=&quot;http://output.jsbin.com/gedujediwa&quot;&gt;http://output.jsbin.com/gedujediwa&lt;/a&gt;&lt;/p&gt;
@@ -35,7 +35,7 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-&lt;h2 id=&quot;解决办法&quot;&gt;解决办法&lt;/h2&gt;
+&lt;h2&gt;解决办法&lt;/h2&gt;
 
 &lt;p&gt;在需要换行的列后面添加一个div并使用clearfix消除float效果，并且clearfix可以和&lt;a href=&quot;http://getbootstrap.com/css/#responsive-utilities&quot;&gt;responsive utilities&lt;/a&gt;一起使用使其在不同屏幕尺寸生效。 例如我们需要在最小的屏幕（xs）显示两列，而其他的屏幕显示三列，那么可以用下面的代码实现。&lt;a href=&quot;http://output.jsbin.com/tefiwu&quot;&gt;http://output.jsbin.com/tefiwu&lt;/a&gt;&lt;/p&gt;
 &lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;div&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;row&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
@@ -55,11 +55,11 @@
     
       <item>
         <title>OSX上安装RVM和Ruby</title>
-        <description>&lt;h2 id=&quot;背景&quot;&gt;背景&lt;/h2&gt;
+        <description>&lt;h2&gt;背景&lt;/h2&gt;
 
 &lt;p&gt;使用系统自带的Ruby gem安装ruby程序的时候会要求使用root帐号或者使用sudo来提高权限。并且当某些程序需要其他版本Ruby的时候切换也不是很方便。不过很幸运RVM可以帮助我们方便的管理Ruby版本在不同版本间方便切换，而且所有内容都安装在当前用户的目录中不会有权限问题。下面是简单的RVM安装使用步骤。&lt;/p&gt;
 
-&lt;h2 id=&quot;安装&quot;&gt;安装&lt;/h2&gt;
+&lt;h2&gt;安装&lt;/h2&gt;
 
 &lt;p&gt;RVM的官网提供了详尽的&lt;a href=&quot;http://rvm.io/rvm/install#explained&quot;&gt;安装方法&lt;/a&gt;,对英文没有障碍或是想了解更多的朋友可以参考。&lt;/p&gt;
 
