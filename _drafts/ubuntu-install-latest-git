@@ -1,0 +1,25 @@
+$ sudo add-apt-repository ppa:git-core/ppa
+ The most current stable version of Git for Ubuntu.
+
+For release candidates, go to https://launchpad.net/~git-core/+archive/candidate .
+ More info: https://launchpad.net/~git-core/+archive/ubuntu/ppa
+Press [ENTER] to continue or ctrl-c to cancel adding it
+
+gpg: keyring `/tmp/tmpayajsxod/secring.gpg' created
+gpg: keyring `/tmp/tmpayajsxod/pubring.gpg' created
+gpg: requesting key E1DF1F24 from hkp server keyserver.ubuntu.com
+gpg: /tmp/tmpayajsxod/trustdb.gpg: trustdb created
+gpg: key E1DF1F24: public key "Launchpad PPA for Ubuntu Git Maintainers" imported
+gpg: Total number processed: 1
+gpg:               imported: 1  (RSA: 1)
+OK
+
+$ sudo apt-get update
+
+if isntalled
+
+$ sudo apt-get upgrade git
+
+or else
+
+$ sudo apt-get install git
